@@ -1,12 +1,23 @@
 
-iteration 
-iterative function to hfind th hegiht of a treee 
-then recursive function 
 
+iterative function to hfind th hegiht of a treee 
 What data normally is in a node - whats the usecase 
 
-header cpp 
+simple binary tree in code c++
 
+
+manual insertion 
+
+finding the height 
+iteratively 
+then recursively 
+
+
+
+
+
+
+https://www.youtube.com/watch?v=Gt2yBZAhsGM
 https://codesignal.com/learn/courses/getting-deep-into-complex-algorithms-for-interviews-with-csharp/lessons/binary-tree-traversals-in-csharp
 
 
