@@ -1,0 +1,55 @@
+
+iteration 
+iterative function to hfind th hegiht of a treee 
+then recursive function 
+
+What data normally is in a node - whats the usecase 
+
+header cpp 
+
+https://codesignal.com/learn/courses/getting-deep-into-complex-algorithms-for-interviews-with-csharp/lessons/binary-tree-traversals-in-csharp
+
+
+
+https://www.perplexity.ai/search/code-a-simple-binary-tree-in-c-33yrclyTR9ygqrFpgGTWqA
+
+https://www.w3schools.com/dsa/dsa_data_binarytrees.php
+
+
+EXAMPLE 1
+
+#include <iostream>
+
+int main()
+{
+    TreeNode t1 = new TreeNode (0,5,5)
+
+    return 0;
+}
+
+
+
+public class TreeNode  // Class 
+{
+    public int Value; // Member variables 
+    public TreeNode Left;
+    public TreeNode Right;
+    
+    // A tree node 
+    public TreeNode(int value)
+    {
+        this.Value = value;
+        this.Left = null;
+        this.Right = null;
+      
+    }
+    
+       // Constructor for main of a tree node start  ( main -> TreeNode(5))
+    public TreeNode(int value, TreeNode left, TreeNode right)
+    {
+        this.Value = value;
+        this.Left = left;
+        this.Right = right;
+        
+    }
+    
