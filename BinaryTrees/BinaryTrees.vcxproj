@@ -124,10 +124,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BinaryTrees.cpp" />
+    <ClCompile Include="BinaryTreeSearchInsert.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BinaryTrees.h" />
+    <ClInclude Include="BinaryTreeSearchInsert.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Text.txt" />
