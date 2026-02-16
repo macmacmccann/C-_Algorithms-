@@ -35,7 +35,7 @@ public: // Used in main
     void insert(int value);   // Public insert
     bool search(int value);   // Public search
     void inorder();           // Print inorder traversal
-    void remove(int value)    // 
+    void remove(int value);   // Public remove
 
 };
 

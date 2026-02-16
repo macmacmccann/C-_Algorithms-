@@ -27,6 +27,56 @@ void BinaryTree::insert(int value)
 
 
 
+// Recursive insert helper
+Node* BinaryTree::insert(Node* node, int value)
+{
+    if (node == nullptr)
+        return new Node(value);
+
+    if (value < node->data)
+        node->left = insert(node->left, value);
+    else if (value > node->data)
+        node->right = insert(node->right, value);
+
+    return node;
+}
+
+bool BinaryTree::search(int value)
+{
+    return search(root, value);
+}
+
+bool BinaryTree::search(Node* node, int value)
+{
+    if (node == nullptr)
+        return false;
+    if (node->data == value)
+        return true;
+
+    if (value < node->data)
+        return search(node->left, value);
+    else
+        return search(node->right, value);
+}
+
+void BinaryTree::inorder()
+{
+    inOrderTraversal(root);
+    std::cout << std::endl;
+}
+
+void BinaryTree::inOrderTraversal(Node* node)
+{
+    if (node == nullptr)
+        return;
+
+    inOrderTraversal(node->left);
+    std::cout << node->data << " ";
+    inOrderTraversal(node->right);
+}
+
+
+
 Node* BinaryTree::findMin(Node* node)
 {
     while (node->left != nullptr)  // Keep going left
