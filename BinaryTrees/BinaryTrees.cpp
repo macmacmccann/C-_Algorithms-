@@ -14,6 +14,9 @@ double avg(double a, double b) {
 }
 
 
+
+
+
 Node::Node(int value) // Constructor cpp for node 
 {
 	data = value;

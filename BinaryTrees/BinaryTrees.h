@@ -6,7 +6,7 @@ double avg(double a, double b);
 
 
 
-
+// Class 
 struct Node
 {
     int data;
