@@ -21,6 +21,8 @@ public: // Constructor:
 	// Access methods:
 	long getNr(void) const { return nr; }
 	void setNr(long n) { nr = n; }
+
+
 	const string& getProd() const { return producer; }
 
 
@@ -61,9 +63,6 @@ private:
 	int numberofAxles;
 	double loadCapacity;
 
-
-
-
 public:
 
 	// constructor 
@@ -72,7 +71,11 @@ public:
 		// Access methods :
 
 		int getNumberOfAxles() const { return numberofAxles; }
+		int setNumberOfAxles(int axels) { numberofAxles = axels; }
+
 		double getLoadCapacity() const { return loadCapacity; }
+		double  setLoadCapacity(int load) { loadCapacity = load; }
+
 		void display() const;
 
 
