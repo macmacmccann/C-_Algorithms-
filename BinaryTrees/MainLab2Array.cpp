@@ -3,7 +3,6 @@
 #include <vector>
 
 #include "Lab2Array.h"
-#include "Lab2Array.cpp"
 
 
 using namespace std;

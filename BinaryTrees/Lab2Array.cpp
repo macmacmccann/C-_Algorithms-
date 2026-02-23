@@ -1,3 +1,5 @@
+
+
 #include "Lab2Array.h"
 #include <iostream>
 #include <vector>
@@ -130,12 +132,12 @@ void BinaryTree::display(Node* node, int depth)
 	if (node == nullptr)
 		return;
 
-	display(node->right, depth + 1); // print depth + four spaces 
+	display(node->right, depth + 1); //  " the right is 1 level deeper" print depth + four spaces  
 
-	for (int i = 0; i < depth; i++)
+	for (int i = 0; i < depth; i++) // if depth = 3 then 3 couts printed ( i) 
 		cout << "    ";
 
-	cout << node->data << endl;
+	cout << node->data << endl; // Print data after spaces 
 
-	display(node->left, depth + 1);
+	display(node->left, depth + 1); // Then recusrively call left 
 }
