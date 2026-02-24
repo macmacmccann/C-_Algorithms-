@@ -123,10 +123,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CityCar.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Vehicles.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CityCar.h" />
     <ClInclude Include="Vehicles.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
