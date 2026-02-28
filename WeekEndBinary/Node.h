@@ -6,9 +6,8 @@
 class Node {
 
 
-private:
-
-	int Value;
+public: // Nodes header all public 
+	int data;
 	Node* left;
 	Node* right;
 

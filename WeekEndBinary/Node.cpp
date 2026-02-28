@@ -6,7 +6,7 @@
 
 Node::Node(int value) {
 
-	Value = value;
+	data = value;
 	left = nullptr;
 	right = nullptr;
 
