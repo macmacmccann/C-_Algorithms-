@@ -18,6 +18,8 @@ public:
 
     //Constructor only the data 
     //Node(int value);
+    // explciit prevents conversions 
+    // eg., char to node 
     explicit Node(char value);
 };
 

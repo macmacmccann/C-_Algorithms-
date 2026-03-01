@@ -12,7 +12,9 @@ public:
 	Node* left;
 	Node* right;
 
-	Node(string value);
+	// without explciit it turns cstring to Node type in node.cpp
+//	Node(char value) : data(value) {}  // Converting constructor
+	explicit Node(string value);
 
 
 };

@@ -11,6 +11,61 @@ Tree::Tree() {
 	root = nullptr;
 }
 
+
+Tree::~Tree() {
+	destroy(root);
+}
+
+void Tree::destroy(Node* node) {
+
+	if (!node) return;
+
+	destroy(node->left);
+	destroy(node->right);
+	delete node;
+}
+
+void Tree::buildFromArrayRecurringHelper(const vector<string>& array) {
+
+									// array , start, end 
+	root = buildFromArrayRecurring(array, 0, array.size() - 1);
+
+}
+	
+
+Node* Tree::buildFromArrayRecurring(const vector<string>& array , int start, int end) {
+
+	if (start > end)
+		return nullptr;
+
+	int mid = (start + end) / 2;
+
+	Node* node = new Node(array[mid]);
+
+	// Build left subtree - array start to mid
+	node->left = buildFromArrayRecurring(array, start, mid - 1);
+
+	// Build right subtree - array mid to end 
+	node->right = buildFromArrayRecurring(array, mid + 1, end);
+
+	return node; // Return node to helper function as root 
+
+}
+
+/*
+
+	Array: ["A", "B", "C", "D", "E"]
+			 0    1    2    3    4
+
+	Tree :
+		C		? array[2]
+	   / \
+	  B   D		? array[1], array[3]
+     /     \
+	A       E	? array[0], array[4]
+
+*/
+
 void Tree::inOrderHelper() {
 
 	inOrderTraversal(root);
@@ -51,7 +106,18 @@ Node* Tree::insert(Node* currentNode, string value) {
 
 Node* Tree::searchHelper(string value) {
 
-	return search(root, value);
+	Node* foundNode = new Node(nullptr);
+	foundNode = search(root, value);
+
+	if (foundNode == nullptr) {
+		cout << "Node not found";
+	}
+	cout << "Node found" << foundNode->data;
+	return foundNode; // just return it but didnt do anything did logic here 
+
+		//old version
+	//return search(root, value);
+
 }
 
 Node* Tree::search(Node* currentNode, string value) {
@@ -132,4 +198,8 @@ Node* Tree::deleteNode(Node* currentNode, string value) {
 		}
 		return currentNode;
 	}
+
+
+
+
 }

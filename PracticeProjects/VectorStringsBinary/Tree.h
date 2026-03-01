@@ -18,6 +18,11 @@ private:
 
 	Node* findMin(Node* currentNode);
 
+	void destroy(Node* root);
+
+	// & by ref - dont copy the entire vector 
+	// const as it reads from the array when constructing this method only creates
+	static Node* buildFromArrayRecurring(const vector<string>& array,int start,int end);
 
 public :
 
@@ -32,7 +37,7 @@ public :
 	Node* searchHelper(string value); // THIS NOT 
 	void deleteNodeHelper(string value); // VOID - root = 
 
-
+	void buildFromArrayRecurringHelper(const vector<string>& array);
 
 	
 	
