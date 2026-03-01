@@ -14,6 +14,7 @@ void Tree::insertHelper(int value) {
 
 	root = insert(root, value);
 
+
 }
 
 Node* Tree::insert(Node* node, int value) 
@@ -88,7 +89,7 @@ Node* Tree::insert(Node* node, int value)
 			return;
 		}
 		inOrderTraversal(node->left);
-		cout << node->data;
+		cout << node->data << "\n";
 		inOrderTraversal(node->right);
 	}
 
@@ -109,7 +110,7 @@ Node* Tree::insert(Node* node, int value)
 	Node* Tree::deleteNode(Node* node, int value) {
 
 		if (node == nullptr) {
-			return;
+			return nullptr;
 		}
 		
 		if (value < node->data) {

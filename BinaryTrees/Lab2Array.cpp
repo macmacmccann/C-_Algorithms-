@@ -91,8 +91,6 @@ void BinaryTree::inOrderTraversal(Node* node)
 	inOrderTraversal(node->right);
 }
 
-
-
 // public search function use in main
 bool BinaryTree::search(char value)
 {
