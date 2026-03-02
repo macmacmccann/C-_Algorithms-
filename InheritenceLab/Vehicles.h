@@ -22,7 +22,7 @@ public:
 
 	Vehicle(long n = 0L, const string& prod = "");
 
-	virtual ~Vehicle() {}
+	virtual ~Vehicle() {} // virtual descrtucor 
 
 	// Access methods:
 	long getNr(void) const { return nr; }
@@ -33,7 +33,7 @@ public:
 
 
 	void setProd(const string& p) { producer = p; }
-	virtual void display(void) const; // 
+	virtual void display(void) const = 0; //  now cannot be instantiated - will create a virtual table 
 
 
 };
@@ -74,7 +74,11 @@ private:
 public:
 
 	
-	Truck(int numofAxles, double loadCapacity);
+	//Truck(int numofAxles, double loadCapacity);
+	Truck(int numofAxles,
+		double loadCapacity,
+		long n = 0,
+		const string& prod = "");
 
 	// get sets 
 

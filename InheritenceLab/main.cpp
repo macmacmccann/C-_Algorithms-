@@ -18,11 +18,15 @@ char menu();
 char menu() {
 
     char choice;
+    cout << "===============\n";
+    cout << "===============\n";
 
     cout << "P = add a passenger car\n";
     cout << "T = add a truck\n";
     cout << "D = display all cars\n";
-    cout << "Q = qit\n";
+    cout << "Q = Quit\n";
+    cout << "===============\n";
+
     cout << "Your choice: ";
     cin >> choice;
 
@@ -37,15 +41,21 @@ int main()
 {
     cout << "vehicles " << endl;
 
-    Vehicle v(12345, "toyota");
-    v.display();
+  //  Vehicle v(12345, "toyota");
+  //  v.display();
 
     cout << " Passenger Car Test" << endl;
+    cout << "===============\n";
+
 
     PassCar pc("Sedan", true, 67890, "BMW");
     pc.display();
 
+    cout << "===============\n";
+
     cout << "\n Truck Test " << endl;
+
+    cout << "===============\n";
 
     Truck t(4, 12.5);
     t.setNr(54321);
@@ -77,38 +87,59 @@ int main()
     
     CityCar fleet;
 
-  
 
     char choice;
+
+    do {
+
 
     choice = menu(); // get the letter they choose
 
 
-    switch (choice) {
-        case 'P':
-            cout << "Add car.\n";
-            fleet.insert("sedan", true, 111, "BMW"); // uses the overloaad insert - passenger
+    switch (toupper(choice)) {
+    case 'P': {
 
-            break;
+        cout << "Car added .\n";
+        //  fleet.insert("sedan", true, 111, "BMW"); // uses the overloaad insert - passenger
 
-        case 't':
-            cout << "Add truck.\n";
-            fleet.insert(4, 12, 6740, "MIT"); // adds a truck 
+        string type; bool sunroof; long nr; string prod;
 
-            break;
+        cout << "Car type: "; cin >> type;
+        cout << "Sunroof (1/0): "; cin >> sunroof;
+        cout << "Reg nr: "; cin >> nr;
+        cout << "Producer: "; cin >> prod;
+        fleet.insert(type, sunroof, nr, prod);
+        cout << "Passenger car added.\n";
 
+
+
+        break;
+    }
+    case 't': {
+        cout << "Truck added .\n";
+        fleet.insert(4, 12, 6740, "MIT"); // adds a truck 
+        int axles; double load; long nr; string prod;
+        cout << "Axles: "; cin >> axles;
+        cout << "Load capacity: "; cin >> load;
+        cout << "Reg nr: "; cin >> nr;
+        cout << "Producer: "; cin >> prod;
+        fleet.insert(axles, load, nr, prod);
+        cout << "Truck added.\n";
+        break;
+    }
         case 'd':
             cout << "Display all cars .\n";
             fleet.display(); // displays 
             break;
-        case 'q':
+        case 'Q':
             cout << " Quit .\n"; 
-            return;
+            return 0;
 
         default:
             cout << "Wrong choice \n";
 
     }
+    } while (choice != 'Q' && choice != 'q');
 
 
 

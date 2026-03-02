@@ -8,11 +8,11 @@ using namespace std;
 #include <vector>
 
 
-class CityCar : public Vehicle
+class CityCar : public Vehicle //
 {
 
 private:
-	vector<Vehicle*> vehicles;
+	vector<Vehicle*> vehicles; // List of vehicles 
 	int currentNum;
 
 public:
@@ -28,3 +28,4 @@ public:
 
 	void display() const;
 };
+
