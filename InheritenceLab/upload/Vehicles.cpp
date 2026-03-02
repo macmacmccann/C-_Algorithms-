@@ -45,26 +45,35 @@ PassCar::PassCar(
 }
 
 
+
+
+
+
+
 void PassCar::display() const
 {
 	cout << "passenger car information:\n";
-	Vehicle::display();
+	//Vehicle::display(); // Wont do this cannot instance 
 	cout << "  type: " << passCarType << endl;
 	cout << "  sunroof: " << (sunRoof ? "yes" : "no") << endl; // quick syntax way
 }
 
 
-// TRUCK ubclass 
 
-Truck::Truck(int numofAxles, double load)
-	: Vehicle(), numberofAxles(numofAxles), loadCapacity(load)
+
+// TRUCK subclass 
+
+Truck::Truck(int numofAxles, double load,
+	long n, const string& prod)
+	: Vehicle(n, prod),          // create base
+	numberofAxles(numofAxles),
+	loadCapacity(load)
 {
 }
-
 void Truck::display() const
 {
 	cout << "truck information:\n";
-	Vehicle::display();
+	//Vehicle::display();
 	cout << "  number of axles: " << numberofAxles << endl;
 	cout << "  load capacity: " << loadCapacity << " tons" << endl;
 }

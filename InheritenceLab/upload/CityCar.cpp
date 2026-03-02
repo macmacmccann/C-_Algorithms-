@@ -10,7 +10,7 @@ using namespace std;
 
 
 
-CityCar::CityCar()
+CityCar::CityCar() // extends vehicle 
 {
 	currentNum = 0;
 }
